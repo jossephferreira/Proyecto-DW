@@ -1,0 +1,53 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* ESTILOS MENU NAVEGACION */
+.navbar {
+    background-color: #ffc444;
+}
+.navbar-brand img {
+    height: 50px;
+}
+.nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+.info-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    margin-bottom: 25px;
+}
+.info-card:hover {
+    transform: translateY(-5px);
+}
+.info-header {
+    background-color: #d4a762;
+    color: white;
+    padding: 15px;
+}
+.hours-table {
+    width: 100%;
+}
+.hours-table tr td {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+.hours-table tr:last-child td {
+    border-bottom: none;
+}
+.map-container {
+    height: 400px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.footer-bottom {
+    background-color: #ffc444;
+    padding: 15px 0;
+    margin-top: 30px;
+    border-radius: 12px;
+}
