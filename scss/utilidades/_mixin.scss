@@ -1,0 +1,29 @@
+@use "_variables" as *;
+@use "_reset" as *;
+@use "_componentes" as *;
+@use "_listas" as *;
+@use "_maps" as *;
+
+//mixin
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hover-effect {
+  transition: $transition;
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+@mixin gradient-bg($color1, $color2) {
+  background: linear-gradient(135deg, $color1, $color2);
+}
+
+@mixin responsive($breakpoint) {
+  @media (max-width: $breakpoint) {
+    @content;
+  }
+}

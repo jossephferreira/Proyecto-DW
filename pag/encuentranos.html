@@ -7,19 +7,19 @@
      <!-- cdn bootstrap -->
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
      <!-- css -->
-     <link rel="stylesheet" href="../css/styleencuentranos.css">
+     <link rel="stylesheet" href="../css/styles-unificado.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 
-<body>
-    <header></header>
+<body class="bg-dark">
+    <header>
  <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="#">
-            <img src="./img/logo1.jpg" alt="Dukes" class="rounded-circle">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../img/logo1.jpg" alt="Dukes" class="rounded-circle">
         </a>
         
         <!-- Botón móvil -->
@@ -34,110 +34,89 @@
                     <a class="nav-link" href="../index.html"><i></i>Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../menu.html"><i class="fas fa-utensils me-1"></i>Menú</a>
+                    <a class="nav-link" href="./menu.html"><i class="fas fa-utensils me-1"></i>Menú</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../promociones.html"><i class="fas fa-percent me-1"></i> Promociones</a>
+                    <a class="nav-link" href="./promociones.html"><i class="fas fa-percent me-1"></i> Promociones</a>
                 </li>
             </ul>
     </header>
-<main>
-    <div class="container py-5">
-        <div class="row justify-content-center">
+
+    <main>
+        <div class="container py-5">
+        <h1 class="text-center mb-5"><i class="fas fa-map-marker-alt me-2"></i>Nuestra Ubicación</h1>
+        
+        <div class="row">
+            <!-- Menú de ubicaciones -->
+            <div class="col-lg-4 mb-4 mb-lg-0">
+                <div class="list-group">
+                    <div class="list-group-item location-card active-location" data-location="central">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">Local</h5>
+                            <small><i class="fas fa-star text-warning"></i></small>
+                        </div>
+                        <p class="mb-1"><i class="fas fa-map-pin me-2"></i>Martin C. Martinez n° 1645</p>
+                        <small><i class="fas fa-phone me-2"></i>+598-24025757</small>
+                    </div>
+                    
+                    <div class="list-group-item location-card" data-location="norte">
+                        <h5 class="mb-1"></h5>
+                        <p class="mb-1"><i class=""></i></p>
+                        <small><i class=""></i></small>
+                    </div>
+                    
+                    <div class="list-group-item location-card" data-location="sur">
+                        <h5 class="mb-1"></h5>
+                        <p class="mb-1"><i class=""></i></p>
+                        <small><i class=""></i></small>
+                    </div>
+                </div>
+                
+                <div class="mt-4 p-3 bg-light rounded">
+                    <h5><i class="fas fa-info-circle me-2"></i>Horario de Atención</h5>
+                    <ul class="list-unstyled">
+                        <li><i class="far fa-clock me-2"></i>Domingo a Jueves: 19:00 - 00:30</li>
+                        <li><i class="far fa-clock me-2"></i>Viernes y Sábados: 19:00 - 02:00</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Mapa -->
             <div class="col-lg-8">
-                <!-- Tarjeta de información del local -->
-                <div class="info-card bg-white">
-                    <div class="info-header">
-                        <h1 class="h3 mb-0"><i class="bi bi-shop"></i> LOCAL</h1>
-                    </div>
-                    <div class="p-4">
-                        <h2 class="h5"><i class="bi bi-geo-alt"></i> Dirección</h2>
-                        <p class="fs-5">Martin C Maritnes 1645</p>
-                        
-                        <h2 class="h5 mt-4"><i class="bi bi-telephone"></i> Teléfono</h2>
-                        <p class="fs-5">....</p>
-                    </div>
+                <div class="map-container">
+                    <!-- Mapa de Google Maps) -->
+                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3272.2888539034197!2d-56.17423552444481!3d-34.899199972849736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x959f81560d0277df%3A0x1d3dc4a36a51da82!2sDuke&#39;s%20Pizzas%20and%20Burgers!5e0!3m2!1ses-419!2suy!4v1747401363565!5m2!1ses-419!2suy" width="600" height="450" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">       
+                    </iframe>"             
                 </div>
                 
-                <!-- Tarjeta de horarios -->
-                <div class="info-card bg-white">
-                    <div class="info-header">
-                        <h1 class="h3 mb-0"><i class="bi bi-clock"></i> HORARIOS</h1>
-                    </div>
-                    <div class="p-4">
-                        <table class="hours-table">
-                            <tr>
-                                <td><strong>Domingo:</strong></td>
-                                <td>19:00 a 00:30</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Lunes:</strong></td>
-                                <td>19:00 a 00:30</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Martes:</strong></td>
-                                <td>19:00 a 00:30</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Miércoles:</strong></td>
-                                <td>19:00 a 00:30</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Jueves:</strong></td>
-                                <td>19:00 a 00:30</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Viernes:</strong></td>
-                                <td>19:00 a 02:00</td>
-                            </tr>
-                            <tr>
-                                <td><strong>Sábado:</strong></td>
-                                <td>19:00 a 02:00</td>
-                            </tr>
-                        </table>
-                    </div>
+                <div class="mt-3">
+                    <button class="btn btn-outline-warning hover-bg-warning "><i class="fas fa-directions me-2"></i>Cómo llegar</button>
+                    <button class="btn btn-outline-warning  hover-bg-warning "><i class="fas fa-share-alt me-2"></i>Compartir ubicación</button>
                 </div>
-                
-                <!-- Tarjeta de zona de entrega -->
-                <div class="info-card bg-white">
-                    <div class="info-header">
-                        <h1 class="h3 mb-0"><i class="bi bi-truck"></i> ZONA DE ENTREGA</h1>
-                    </div>
-                    <div class="p-4">
-                        <!-- Mapa (puedes integrar Google Maps aquí) -->
-                        <div class="map-container bg-secondary bg-opacity-10 d-flex align-items-center justify-content-center">
-                            <div class="text-center">
-                                <i class="bi bi-map" style="font-size: 3rem; color: #d4a762;"></i>
-                                <p class="mt-2">Mapa de zona de entrega</p>
-                                <button class="btn btn-outline-primary mt-2">
-                                    Ver mapa completo
-                                </button>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
+
+            <footer>
+                <div class="footer-bottom">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6 text-center text-md-start">
+                                <p class="mb-0">&copy; 2023 DUKES. Todos los derechos reservados.</p>
+                                <div class="social-icons mt-3">
+                                    <a href="https://www.facebook.com/profile.php?id=61555258666854&rdid=vgNnrSs9ct17Vj7b&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1L7TQNirTR%2F#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="https://www.instagram.com/dukes_1645/"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                </div>
+                            </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</main>
-<footer>
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-0">&copy; 2023 DUKES. Todos los derechos reservados.</p>
-                        <div class="social-icons mt-3">
-                            <a href="https://www.facebook.com/profile.php?id=61555258666854&rdid=vgNnrSs9ct17Vj7b&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1L7TQNirTR%2F#"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://www.instagram.com/dukes_1645/"><i class="fab fa-instagram"></i></a>
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    </footer>
+            </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
-</body>
-</html>
+    </body>
+    </html>

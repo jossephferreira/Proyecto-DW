@@ -1,0 +1,20 @@
+/* Error: Undefined variable.
+ *   ,
+ * 9 |   transition: $transition;
+ *   |               ^^^^^^^^^^^
+ *   '
+ *   scss\utilidades\_mixin.scss 9:15         hover-effect()
+ *   scss\utilidades\_componentes.scss 171:5  @use
+ *   scss\utilidades\_reset.scss 4:1          @use
+ *   scss\style.scss 3:1                      root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 9 \2502    transition: $transition;\d\a   \2502                ^^^^^^^^^^^\a   \2575 \a   scss\\utilidades\\_mixin.scss 9:15         hover-effect()\a   scss\\utilidades\\_componentes.scss 171:5  @use\a   scss\\utilidades\\_reset.scss 4:1          @use\a   scss\\style.scss 3:1                      root stylesheet";
+}

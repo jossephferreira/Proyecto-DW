@@ -1,0 +1,262 @@
+@use "utilidades/_variables";
+@use "utilidades/_mixin";
+@use "utilidades/_reset";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// MENÚ NAVEGACIÓN
+.navbar {
+  background-color: $primary-color;
+  padding: auto;
+
+  &-brand img {
+    height: 50px;
+  }
+
+  .nav-link {
+    color: white !important;
+    font-weight: 500;
+  }
+}
+
+// MENÚ
+.menu-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin-top: 5px;
+
+  .menu-header {
+    background: linear-gradient(135deg, $primary-color, $primary-color);
+    color: white;
+    padding: 18px;
+    text-align: center;
+
+    h1 {
+      margin: 0;
+      font-size: 2.2em;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .menu-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    gap: 15px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #fffdf7;
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    &-content {
+      flex: 1;
+    }
+
+    h2 {
+      color: $primary-color;
+      margin: 0 0 8px 0;
+      font-size: 1.3em;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+      line-height: 1.4;
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    &-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 8px;
+      object-fit: cover;
+      border: 1px solid #eee;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+// BOTÓN PEDIR
+.btn-pedir {
+  background-color: black;
+  border: none;
+
+  &:hover {
+    background-color: #b88c0a;
+  }
+}
+
+// CARRUSEL
+.carousel-inner {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  border-radius: 12px;
+}
+
+.carousel-item {
+  height: 480px !important;
+  width: 100%;
+  object-fit: cover;
+}
+
+// CARDS
+.action-card {
+  background-color: black;
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s;
+  height: 100%;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+.btn-action {
+  border-radius: 50px;
+  padding: 8px 25px;
+  font-weight: 600;
+}
+
+// FOOTER
+footer {
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  padding-top: 40px;
+  border-radius: 12px;
+
+  .footer-logo img {
+    height: 50px;
+    margin-bottom: 20px;
+  }
+
+  .footer-links {
+    h5 {
+      color: #f39c12;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+
+      li {
+        margin-bottom: 10px;
+      }
+
+      a {
+        color: #ecf0f1;
+        text-decoration: none;
+        transition: all 0.3s;
+
+        &:hover {
+          color: #f39c12;
+          padding-left: 5px;
+        }
+      }
+    }
+  }
+
+  .social-icons a {
+    color: white;
+    font-size: 20px;
+    margin-right: 15px;
+    transition: all 0.3s;
+
+    &:hover {
+      color: #f39c12;
+      transform: translateY(-3px);
+    }
+  }
+
+  .footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    margin-top: 30px;
+    border-width: 12px;
+  }
+}
+
+// WHATSAPP BOTÓN
+.whatsapp-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  animation: pulse 2s infinite;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #128c7e;
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.4);
+  }
+
+  &.with-text i {
+    margin-right: 10px;
+    font-size: 24px;
+  }
+
+  @media (max-width: 768px) {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
